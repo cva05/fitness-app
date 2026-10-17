@@ -1,0 +1,618 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f8f5;
+    color: #182018;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+
+    background: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #2f7d32;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 10%;
+
+    background:
+        linear-gradient(
+            120deg,
+            #e8f5e9,
+            #f7f8f5
+        );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    color: #388e3c;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 65px;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #388e3c;
+}
+
+.hero p {
+    color: #666;
+
+    line-height: 1.7;
+
+    max-width: 550px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+
+    display: flex;
+
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.primary-btn {
+    background: #2e7d32;
+
+    color: white;
+}
+
+.secondary-btn {
+    border: 1px solid #2e7d32;
+
+    color: #2e7d32;
+}
+
+
+/* TOOLS */
+
+.tools {
+    padding: 90px 10%;
+
+    text-align: center;
+}
+
+.tools h2 {
+    font-size: 38px;
+}
+
+.section-description {
+    color: #777;
+
+    margin-top: 10px;
+
+    margin-bottom: 40px;
+}
+
+.tool-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.tool-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    text-align: left;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.05);
+
+    transition: 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+.tool-icon {
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+.tool-card h3 {
+    margin-bottom: 10px;
+}
+
+.tool-card p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.coming-soon {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    font-size: 11px;
+
+    color: #777;
+}
+
+
+/* CALCULATOR */
+
+.calculator-section,
+.food-section {
+    padding: 90px 10%;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #777;
+}
+
+
+.calculator-container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 30px;
+}
+
+
+.calculator-card,
+.result-card,
+.food-search-card,
+.selected-food-card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.05);
+}
+
+
+label {
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+input:focus,
+select:focus {
+    border-color: #4caf50;
+}
+
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    background: #2e7d32;
+
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+.calculator-card button {
+    width: 100%;
+
+    margin-top: 25px;
+}
+
+
+.result-card h3 {
+    margin-bottom: 20px;
+}
+
+
+.result-box {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 0;
+
+    border-bottom:
+        1px solid #eee;
+}
+
+
+.result-box span {
+    color: #666;
+}
+
+
+.result-box strong {
+    font-size: 18px;
+}
+
+
+.highlight {
+    background: #e8f5e9;
+
+    padding: 18px;
+
+    border-radius: 8px;
+
+    margin: 10px 0;
+}
+
+
+/* FOOD */
+
+.food-container {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 30px;
+}
+
+
+.search-row {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+
+.search-row input {
+    flex: 1;
+}
+
+
+.search-row button {
+    width: 100px;
+}
+
+
+.food-results {
+    margin-top: 20px;
+}
+
+
+.food-result {
+
+    padding: 15px;
+
+    border-bottom:
+        1px solid #eee;
+
+    cursor: pointer;
+}
+
+
+.food-result:hover {
+    background: #f1f8f2;
+}
+
+
+.food-result strong {
+    display: block;
+
+    margin-bottom: 5px;
+}
+
+
+.food-result span {
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+.empty-message {
+    color: #999;
+
+    margin-top: 20px;
+}
+
+
+.food-info {
+
+    margin-top: 20px;
+}
+
+
+.food-info h4 {
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+
+.food-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+
+.food-stat {
+
+    background: #f5f7f5;
+
+    padding: 15px;
+
+    border-radius: 8px;
+}
+
+
+.food-stat span {
+    display: block;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+.food-stat strong {
+    font-size: 18px;
+}
+
+
+/* JOURNEY */
+
+.journey {
+
+    padding: 100px 10%;
+
+    text-align: center;
+
+    background: #182018;
+
+    color: white;
+}
+
+
+.journey h2 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+
+.journey > p {
+    color: #b8c0b8;
+}
+
+
+.journey-stats {
+
+    max-width: 800px;
+
+    margin: 50px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.journey-stats div {
+    padding: 25px;
+
+    background: #232d23;
+
+    border-radius: 10px;
+}
+
+
+.journey-stats strong {
+    display: block;
+
+    font-size: 28px;
+}
+
+
+.journey-stats span {
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+
+/* FOOTER */
+
+footer {
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .tool-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .calculator-container,
+    .food-container {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-stats {
+        grid-template-columns: 1fr;
+    }
+}
